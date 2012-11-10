@@ -17,6 +17,6 @@ public partial class admin : System.Web.UI.Page
     {
         CorruptoInstance instance = new CorruptoInstance();
         instance.Execute(new CorruptoExecutionState());
-        lblLastExecutionTime.Text = String.Format("Last execution time: ", DateTime.Now.ToLongTimeString());
+        lblLastExecutionTime.Text = String.Format("Last execution time: {0}", DateTime.Now.ToLongTimeString());
     }
 }
