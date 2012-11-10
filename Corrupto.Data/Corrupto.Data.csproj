@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D91229B-4D99-4B2D-AE64-BC370424D8D6}</ProjectGuid>
+    <ProjectGuid>{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corrupto.Data</RootNamespace>
@@ -40,12 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Corrupto.Interfaces\Corrupto.Interfaces.csproj">
-      <Project>{ad610605-492d-4774-93b9-334766323502}</Project>
-      <Name>Corrupto.Interfaces</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

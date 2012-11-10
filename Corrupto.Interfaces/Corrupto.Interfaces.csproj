@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AD610605-492D-4774-93B9-334766323502}</ProjectGuid>
+    <ProjectGuid>{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corrupto.Interfaces</RootNamespace>

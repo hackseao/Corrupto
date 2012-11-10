@@ -1,36 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Corrupto", "http://localhost:19393", "{09380FA4-C991-4147-A2C8-E68A7097966F}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Corrupto.Web", "http://localhost:2512", "{D5772EB7-3277-4D10-8802-449616E0DBE5}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{ad610605-492d-4774-93b9-334766323502}|Corrupto.Interfaces.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_19393"
-		Debug.AspNetCompiler.PhysicalPath = "..\Corrupto\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_19393\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_2512"
+		Debug.AspNetCompiler.PhysicalPath = "Corrupto.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2512\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_19393"
-		Release.AspNetCompiler.PhysicalPath = "..\Corrupto\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_19393\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_2512"
+		Release.AspNetCompiler.PhysicalPath = "Corrupto.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2512\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\Corrupto\"
+		SlnRelativePath = "Corrupto.Web\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{AD610605-492D-4774-93B9-334766323502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Data", "Corrupto.Data\Corrupto.Data.csproj", "{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.Logic\Corrupto.Logic.csproj", "{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Twitter", "Corrupto.Twitter\Corrupto.Twitter.csproj", "{41BB24E0-BE7F-4EF6-9356-77D74507CF92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Twitter", "Corrupto.Twitter\Corrupto.Twitter.csproj", "{E9617880-D5E0-4FEE-A792-B13C238FC3D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.Logic\Corrupto.Logic.csproj", "{2BA5B473-BD0B-439A-A3D0-863381220037}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Data", "Corrupto.Data\Corrupto.Data.csproj", "{2D91229B-4D99-4B2D-AE64-BC370424D8D6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,26 +37,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09380FA4-C991-4147-A2C8-E68A7097966F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09380FA4-C991-4147-A2C8-E68A7097966F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09380FA4-C991-4147-A2C8-E68A7097966F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{09380FA4-C991-4147-A2C8-E68A7097966F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{AD610605-492D-4774-93B9-334766323502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD610605-492D-4774-93B9-334766323502}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD610605-492D-4774-93B9-334766323502}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD610605-492D-4774-93B9-334766323502}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5772EB7-3277-4D10-8802-449616E0DBE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5772EB7-3277-4D10-8802-449616E0DBE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5772EB7-3277-4D10-8802-449616E0DBE5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5772EB7-3277-4D10-8802-449616E0DBE5}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41BB24E0-BE7F-4EF6-9356-77D74507CF92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41BB24E0-BE7F-4EF6-9356-77D74507CF92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41BB24E0-BE7F-4EF6-9356-77D74507CF92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41BB24E0-BE7F-4EF6-9356-77D74507CF92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA5B473-BD0B-439A-A3D0-863381220037}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA5B473-BD0B-439A-A3D0-863381220037}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA5B473-BD0B-439A-A3D0-863381220037}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA5B473-BD0B-439A-A3D0-863381220037}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
