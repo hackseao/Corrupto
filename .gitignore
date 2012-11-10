@@ -42,6 +42,7 @@ Web.config
 *.suo
 *.user
 *.sln.docstates
+*.config
 
 # Build results
 [Dd]ebug/
