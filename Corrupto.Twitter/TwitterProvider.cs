@@ -80,6 +80,11 @@ namespace Corrupto.Twitter
             return mentions;
         }
 
+        public void SendDirectMessage(decimal recipientId, string message)
+        {
+            TwitterDirectMessage.Send(this.Credentials, recipientId, message);
+        }
+
         private void ValidateCredentials()
         {
             if(TwitterAccount.VerifyCredentials(this.Credentials).Result != RequestResult.Success)

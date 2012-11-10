@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CorruptoExecutionState.cs" />
     <Compile Include="CorruptoInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryHelp.cs" />
@@ -52,6 +53,10 @@
     <ProjectReference Include="..\Corrupto.Interfaces\Corrupto.Interfaces.csproj">
       <Project>{de60fb41-e023-48ca-a99e-f4d7f8cbd2c3}</Project>
       <Name>Corrupto.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Corrupto.Twitter\Corrupto.Twitter.csproj">
+      <Project>{41bb24e0-be7f-4ef6-9356-77d74507cf92}</Project>
+      <Name>Corrupto.Twitter</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
