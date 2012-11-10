@@ -9,7 +9,7 @@ namespace Corrupto.Logic
     /// <summary>
     /// Entry Point for Server Data scrapping.
     /// </summary>
-    class Search
+    public class Search
     {
         public Corrupto.Interfaces.IResult ExecuteSearch(string rawQueryString)
         {

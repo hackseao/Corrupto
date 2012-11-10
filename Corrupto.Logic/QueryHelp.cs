@@ -8,6 +8,11 @@ namespace Corrupto.Logic
 {
     public class QueryHelp : Corrupto.Interfaces.IQuery
     {
+        const string RESPONSEHELP = "Utiliser le format suivant [commande] [source] [codepostal]/n" + 
+            "commande: aide, max, top3, /n"+ 
+            "source: Contrats, Dons, /n" +
+            "example: max don H0H0H0";
+
         public enum QueryType
         {
             Max,
@@ -24,7 +29,10 @@ namespace Corrupto.Logic
 
         public Interfaces.IUnformattedResult Execute()
         {
-            throw new NotImplementedException();
+            return new UnformattedResult()
+            {
+                RawResult = RESPONSEHELP
+            };
         }
     }
 }

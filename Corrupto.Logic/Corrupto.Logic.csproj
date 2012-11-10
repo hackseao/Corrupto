@@ -45,6 +45,7 @@
     <Compile Include="Result.cs" />
     <Compile Include="ResultFormatter.cs" />
     <Compile Include="Search.cs" />
+    <Compile Include="UnformattedResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Corrupto.Interfaces\Corrupto.Interfaces.csproj">

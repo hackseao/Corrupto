@@ -27,7 +27,12 @@ namespace Corrupto.Logic
         private string applyMaxCharFilter(string from)
         {
             if (!string.IsNullOrEmpty(from))
-                return from.Substring(0, MAXRESPONSE);
+            {
+                if (from.Length > MAXRESPONSE)
+                    return from.Substring(1, MAXRESPONSE);
+                else
+                    return from;
+            }
 
             return string.Empty;
         }

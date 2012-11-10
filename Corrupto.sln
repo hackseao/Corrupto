@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic.Test", "Corrupto.Logic.Test\Corrupto.Logic.Test.csproj", "{3A0C4507-8ADE-4257-AAEA-2824ADA30A50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0C4507-8ADE-4257-AAEA-2824ADA30A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0C4507-8ADE-4257-AAEA-2824ADA30A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0C4507-8ADE-4257-AAEA-2824ADA30A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0C4507-8ADE-4257-AAEA-2824ADA30A50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

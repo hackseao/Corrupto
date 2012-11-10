@@ -8,9 +8,17 @@ namespace Corrupto.Logic
 {
     public class Result : Corrupto.Interfaces.IResult
     {
-        /// <summary>
-        /// This result should already be formatted for display
-        /// </summary>
-        public string ResultToDisplay;
+        string _resultToDisplay;
+        public string ResultToDisplay
+        {
+            get
+            {
+                return _resultToDisplay;
+            }
+            set
+            {
+                _resultToDisplay = value;
+            }
+        }
     }
 }
