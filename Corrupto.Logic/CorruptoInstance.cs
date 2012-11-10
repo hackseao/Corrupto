@@ -8,7 +8,6 @@ namespace Corrupto.Logic
     public class CorruptoInstance
     {
         private TwitterProvider _twitter;
-        private decimal _lastMentionStatusId;
 
         public CorruptoInstance()
         {
