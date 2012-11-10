@@ -8,6 +8,7 @@ namespace Corrupto.Twitter
 {
     public class TwitterProvider
     {
+        private const int MaxResultsPerQuery = 200;
         private OAuthTokens Credentials
         {
             get
@@ -40,24 +41,43 @@ namespace Corrupto.Twitter
                 }
             }
         }
-
-        public List<DirectMessage> GetDirectMessages()
+        
+        public List<Message> GetDirectMessages(decimal sinceStatusId)
         {
-            return GetDirectMessages(decimal.Zero);
-        }
-        public List<DirectMessage> GetDirectMessages(decimal sinceStatusId)
-        {
-            var options = new DirectMessagesOptions() {
-                Count = 200,
+            var query = TwitterDirectMessage.DirectMessages(this.Credentials, new DirectMessagesOptions() {
+                Count = MaxResultsPerQuery,
                 SinceStatusId = sinceStatusId
-            };
+            }).ResponseObject;
 
-            var msgs = TwitterDirectMessage.DirectMessages(this.Credentials, options).ResponseObject;
-            return (from m in msgs select new DirectMessage{
+            var messages = (from m in query select new Message {
                 Id = m.Id,
-                User = m.SenderScreenName,
+                UserId = m.SenderId,
+                Username = m.SenderScreenName,
                 Text = m.Text
             }).ToList();
+
+            return messages;
+        }
+        public List<Message> GetMentions(decimal sinceStatusId)
+        {
+            var query = TwitterTimeline.Mentions(this.Credentials, new TimelineOptions()
+            {
+                Count = MaxResultsPerQuery,
+                SinceStatusId = sinceStatusId
+            }).ResponseObject;
+
+            var mentions = (from m in query
+                    select new Message
+                    {
+                        Id = m.Id,
+                        UserId = m.User.Id,
+                        Username = m.User.ScreenName,
+                        Text = m.Text
+                    }).ToList();
+
+            this.Follow(mentions.Select(m => m.UserId).ToList());
+
+            return mentions;
         }
 
         private void ValidateCredentials()
@@ -65,6 +85,17 @@ namespace Corrupto.Twitter
             if(TwitterAccount.VerifyCredentials(this.Credentials).Result != RequestResult.Success)
             {
                 throw(new ApplicationException("Wrong credentials."));
+            }
+        }
+        private void Follow(List<decimal> userIds)
+        {
+            var friendsIds = TwitterFriendship.FriendsIds(this.Credentials).ResponseObject;
+            foreach(var userId in userIds)
+            {
+                if(!friendsIds.Contains(userId))
+                {
+                    TwitterFriendship.Create(this.Credentials, userId);
+                }
             }
         }
     }

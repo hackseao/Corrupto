@@ -13,10 +13,12 @@ public partial class debug : System.Web.UI.Page
     {
         TwitterProvider p = new TwitterProvider();
 
-        //var messages = p.GetDirectMessages();
-        //decimal lastId = messages.Last().Id;
-        //var messages2 = p.GetDirectMessages(lastId);
-
         p.ReciprocateFriendships();
+
+        var mentions = p.GetMentions(0);
+        foreach(var mention in mentions)
+        {
+            Response.Write(mention.Text);
+        }
     }
 }
