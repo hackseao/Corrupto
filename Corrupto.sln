@@ -5,6 +5,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Corrupto.Web", "http://loca
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		ProjectReferences = "{41bb24e0-be7f-4ef6-9356-77d74507cf92}|Corrupto.Twitter.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_2512"
 		Debug.AspNetCompiler.PhysicalPath = "Corrupto.Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2512\"
@@ -30,11 +31,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.Logic\Corrupto.Logic.csproj", "{2BA5B473-BD0B-439A-A3D0-863381220037}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ext", "ext", "{859B241B-7B36-4D42-86B1-F66964E2A94E}"
-	ProjectSection(SolutionItems) = preProject
-		C:\Users\Guillaume\Desktop\LinqToTwitter\net40\LinqToTwitter.dll = C:\Users\Guillaume\Desktop\LinqToTwitter\net40\LinqToTwitter.dll
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
