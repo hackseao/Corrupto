@@ -9,7 +9,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button ID="btnExecute" Text="Execute" runat="server" OnClick="btnExecute_Click" />
+        <asp:Button ID="btnExecute" Text="Execute" runat="server" OnClick="btnExecute_Click" /><br />
+        <br />
+        <asp:Label ID="lblLastExecutionTime" runat="server" />
     </div>
     </form>
 </body>

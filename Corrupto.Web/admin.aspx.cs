@@ -11,12 +11,12 @@ public partial class admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
 
     protected void btnExecute_Click(object sender, EventArgs e)
     {
         CorruptoInstance instance = new CorruptoInstance();
         instance.Execute(new CorruptoExecutionState());
+        lblLastExecutionTime.Text = String.Format("Last execution time: ", DateTime.Now.ToLongTimeString());
     }
 }

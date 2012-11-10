@@ -9,6 +9,7 @@ namespace Corrupto.Twitter
     public class TwitterProvider
     {
         private const int MaxResultsPerQuery = 200;
+        private readonly TimeSpan ExecutionInterval = TimeSpan.FromMinutes(Convert.ToInt16(ConfigurationManager.AppSettings["executionInterval"]));
         private OAuthTokens Credentials
         {
             get
@@ -49,7 +50,9 @@ namespace Corrupto.Twitter
                 SinceStatusId = sinceStatusId
             }).ResponseObject;
 
-            var messages = (from m in query select new Message {
+            var messages = (from m in query
+                where m.CreatedDate >= DateTime.UtcNow.Subtract(ExecutionInterval)
+                select new Message {
                 Id = m.Id,
                 UserId = m.SenderId,
                 Username = m.SenderScreenName,
@@ -67,6 +70,7 @@ namespace Corrupto.Twitter
             }).ResponseObject;
 
             var mentions = (from m in query
+                    where m.CreatedDate >= DateTime.UtcNow.Subtract(ExecutionInterval)
                     select new Message
                     {
                         Id = m.Id,

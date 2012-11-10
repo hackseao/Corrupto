@@ -21,7 +21,7 @@ namespace Corrupto.Logic
             var mentions = _twitter.GetMentions(state.LastMentionStatusId); // also follows whomever mentions Corrupto
             var directMessages = _twitter.GetDirectMessages(state.LastDirectMessageStatusId);
 
-            string tmpReply = "Bien reçu {0} mais je ne suis pas encore prêt! Patience!";
+            string tmpReply = "Bien reçu @{0} mais je ne suis pas encore prêt! Patience!";
 
             foreach(var mention in mentions)
             {
