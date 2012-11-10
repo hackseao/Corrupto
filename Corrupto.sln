@@ -24,13 +24,13 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Corrupto", "http://localhos
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Data", "Corrupto.Data\Corrupto.Data.csproj", "{0266222B-5C22-4CB9-8539-E859815DBB49}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{AD610605-492D-4774-93B9-334766323502}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.Logic\Corrupto.Logic.csproj", "{65E7D615-BBF4-47E3-A709-97D5BF4F5E0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Twitter", "Corrupto.Twitter\Corrupto.Twitter.csproj", "{E9617880-D5E0-4FEE-A792-B13C238FC3D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Data", "Corrupto.Data\Corrupto.Data.csproj", "{2D91229B-4D99-4B2D-AE64-BC370424D8D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,10 +42,6 @@ Global
 		{09380FA4-C991-4147-A2C8-E68A7097966F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09380FA4-C991-4147-A2C8-E68A7097966F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{09380FA4-C991-4147-A2C8-E68A7097966F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{0266222B-5C22-4CB9-8539-E859815DBB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0266222B-5C22-4CB9-8539-E859815DBB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0266222B-5C22-4CB9-8539-E859815DBB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0266222B-5C22-4CB9-8539-E859815DBB49}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD610605-492D-4774-93B9-334766323502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD610605-492D-4774-93B9-334766323502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD610605-492D-4774-93B9-334766323502}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,6 +54,10 @@ Global
 		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9617880-D5E0-4FEE-A792-B13C238FC3D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D91229B-4D99-4B2D-AE64-BC370424D8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
