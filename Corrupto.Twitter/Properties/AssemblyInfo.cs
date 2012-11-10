@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Corrupto.Data")]
+[assembly: AssemblyTitle("Corrupto.Twitter")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Corrupto.Data")]
+[assembly: AssemblyProduct("Corrupto.Twitter")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7abdbacf-7f44-4bfa-a57b-3374c890eb64")]
+[assembly: Guid("2f79fb0c-1b19-4b0c-8df8-74a6d6d06c84")]
 
 // Version information for an assembly consists of the following four values:
 //
