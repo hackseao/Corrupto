@@ -31,6 +31,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ext", "ext", "{859B241B-7B36-4D42-86B1-F66964E2A94E}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Guillaume\Desktop\LinqToTwitter\net40\LinqToTwitter.dll = C:\Users\Guillaume\Desktop\LinqToTwitter\net40\LinqToTwitter.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
