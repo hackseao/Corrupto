@@ -11,14 +11,14 @@ public partial class debug : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        TwitterProvider p = new TwitterProvider();
+        //TwitterProvider p = new TwitterProvider();
 
-        p.ReciprocateFriendships();
+        //p.ReciprocateFriendships();
 
-        var mentions = p.GetMentions(0);
-        foreach(var mention in mentions)
-        {
-            Response.Write(mention.Text);
-        }
+        //var mentions = p.GetMentions(0);
+        //foreach(var mention in mentions)
+        //{
+        //    Response.Write(mention.Text);
+        //}
     }
 }
