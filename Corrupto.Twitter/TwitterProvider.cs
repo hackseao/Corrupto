@@ -8,8 +8,6 @@ namespace Corrupto.Twitter
 {
     public class TwitterProvider
     {
-        private decimal _lastStatusId;
-        
         private OAuthTokens Credentials
         {
             get
@@ -27,6 +25,20 @@ namespace Corrupto.Twitter
         public TwitterProvider()
         {
             ValidateCredentials();
+        }
+
+        public void ReciprocateFriendships()
+        {
+            var followersIds = TwitterFriendship.FollowersIds(this.Credentials).ResponseObject;
+            var friendsIds = TwitterFriendship.FriendsIds(this.Credentials).ResponseObject;
+            
+            foreach(var followerId in followersIds)
+            {
+                if(!friendsIds.Contains(followerId))
+                {
+                    TwitterFriendship.Create(this.Credentials, followerId);
+                }
+            }
         }
 
         public List<DirectMessage> GetDirectMessages()
