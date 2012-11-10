@@ -52,6 +52,7 @@ namespace Corrupto.Twitter
 
             var messages = (from m in query
                 where m.CreatedDate >= DateTime.UtcNow.Subtract(ExecutionInterval)
+                orderby m.Id ascending
                 select new Message {
                 Id = m.Id,
                 UserId = m.SenderId,
@@ -71,6 +72,7 @@ namespace Corrupto.Twitter
 
             var mentions = (from m in query
                     where m.CreatedDate >= DateTime.UtcNow.Subtract(ExecutionInterval)
+                    orderby m.Id ascending
                     select new Message
                     {
                         Id = m.Id,

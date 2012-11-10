@@ -2,12 +2,12 @@
 
 namespace Corrupto.Logic
 {
-    public class CorruptoExecutionState
+    public class ExecutionState
     {
         public decimal LastMentionStatusId { get; set; }
         public decimal LastDirectMessageStatusId { get; set; }
 
-        public CorruptoExecutionState()
+        public ExecutionState()
         {
             LastMentionStatusId = 0;
             LastDirectMessageStatusId = 0;

@@ -17,7 +17,7 @@ public partial class admin : System.Web.UI.Page
     protected void btnExecute_Click(object sender, EventArgs e)
     {
         CorruptoInstance instance = new CorruptoInstance();
-        instance.Execute(new CorruptoExecutionState());
+        instance.Execute();
         lblLastExecutionTime.Text = String.Format("Last execution time: {0}", DateTime.Now.ToLongTimeString());
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using Corrupto.Twitter;
 using Corrupto.Interfaces;
@@ -14,13 +15,16 @@ namespace Corrupto.Logic
             _twitter = new TwitterProvider();
         }
 
-        public void Execute(CorruptoExecutionState state)
+        public void Execute()
         {
+            var state = ExecutionStatePersistence.Get();
+
             _twitter.ReciprocateFriendships();
 
             var mentions = _twitter.GetMentions(state.LastMentionStatusId); // also follows whomever mentions Corrupto
             var directMessages = _twitter.GetDirectMessages(state.LastDirectMessageStatusId);
 
+            //HACK
             string tmpReply = "Bien reçu @{0} mais je ne suis pas encore prêt! Patience!";
 
             foreach(var mention in mentions)
@@ -28,7 +32,6 @@ namespace Corrupto.Logic
                 //IResult result = Search(mention.Text);
                 //_twitter.SendDirectMessage(mention.UserId, result.ResultToDisplay);
                 _twitter.SendDirectMessage(mention.UserId, String.Format(tmpReply, mention.Username));
-
             }
 
             foreach(var message in directMessages)
@@ -37,6 +40,14 @@ namespace Corrupto.Logic
                 //_twitter.SendDirectMessage(message.UserId, result.ResultToDisplay);
                 _twitter.SendDirectMessage(message.UserId, String.Format(tmpReply, message.Username));
             }
+
+            var newState = new ExecutionState()
+            {
+                LastMentionStatusId = mentions.Count() > 0 ? mentions.Max(m => m.Id) : state.LastMentionStatusId,
+                LastDirectMessageStatusId = directMessages.Count() > 0 ? directMessages.Max(m => m.Id) : state.LastDirectMessageStatusId
+            };
+
+            ExecutionStatePersistence.Set(newState);
         }
 
         private IResult Search(string query)

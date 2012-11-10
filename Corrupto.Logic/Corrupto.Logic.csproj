@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CorruptoExecutionState.cs" />
+    <Compile Include="ExecutionState.cs" />
     <Compile Include="CorruptoInstance.cs" />
+    <Compile Include="ExecutionStatePersistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryHelp.cs" />
     <Compile Include="QueryStringParser.cs" />
