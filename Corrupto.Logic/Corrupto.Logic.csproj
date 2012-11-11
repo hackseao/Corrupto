@@ -45,6 +45,7 @@
     <Compile Include="ExecutionStatePersistence.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryHelp.cs" />
+    <Compile Include="QueryLicense.cs" />
     <Compile Include="QueryStringParser.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="ResultFormatter.cs" />
@@ -52,6 +53,10 @@
     <Compile Include="UnformattedResult.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Corrupto.Data\Corrupto.Data.csproj">
+      <Project>{28844eff-90b6-4426-ae5c-8d6fbab2df82}</Project>
+      <Name>Corrupto.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Corrupto.Interfaces\Corrupto.Interfaces.csproj">
       <Project>{de60fb41-e023-48ca-a99e-f4d7f8cbd2c3}</Project>
       <Name>Corrupto.Interfaces</Name>

@@ -28,6 +28,10 @@ namespace Corrupto.Logic
             if (helpQuery!=null)
                 result.Add(helpQuery);
 
+            IQuery licenseQuery = GetCommandLicenseListQuery(_rawQueryString);
+            if (licenseQuery != null)
+                result.Add(licenseQuery);
+
             //TODO: Add more parsers here.
 
             return result;
@@ -39,8 +43,16 @@ namespace Corrupto.Logic
                 || queryString.ToLower().Contains("-a")
                 || queryString.ToLower().Contains("help")
                 || queryString.ToLower().Contains("-?"))
-                    return new QueryHelp(QueryHelp.QueryType.Help);
+                    return new QueryHelp();
             
+            return null;
+        }
+
+        private IQuery GetCommandLicenseListQuery(string queryString)
+        {
+            if (queryString.ToLower().Contains("license"))
+                return new QueryLicense(QueryLicense.QueryType.Top3);
+
             return null;
         }
     }

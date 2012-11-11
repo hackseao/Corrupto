@@ -13,20 +13,6 @@ namespace Corrupto.Logic
             "source: Contrats, Dons, /n" +
             "example: max don H0H0H0";
 
-        public enum QueryType
-        {
-            Max,
-            Top3,
-            Any,
-            Help
-        };
-
-        private QueryType _type;
-        public QueryHelp(QueryType type)
-        {
-            _type = type;
-        }
-
         public Interfaces.IUnformattedResult Execute()
         {
             return new UnformattedResult()
