@@ -11,6 +11,7 @@ namespace Corrupto.Logic
     {
         public string Nom {get; set;}
         public string Nom2 { get; set; }
+        public string NumeroLicense { get; set; }
 
         public enum QueryType
         {
@@ -29,7 +30,7 @@ namespace Corrupto.Logic
         {
             Interfaces.IUnformattedResult re = new UnformattedResult();
             Corrupto.Data.Licence data = new Data.Licence(ConfigurationManager.ConnectionStrings["CorruptoDB"].ConnectionString);
-            List<string> rawResult = data.GetLicense(Nom, Nom2);
+            List<string> rawResult = data.GetLicense(Nom, Nom2, NumeroLicense);
             if (rawResult != null && rawResult.Count > 0)
             {
                 re.RawResult = "NON! ";
