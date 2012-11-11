@@ -12,15 +12,22 @@ public partial class admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        lblOutput.Text = "Status: " + Scheduler.ToggledOn.ToString();
+        UpdateStatus();
     }
 
     protected void btnStart_Click(object sender, EventArgs e)
     {
         Scheduler.Start();
+        UpdateStatus();
     }
     protected void btnStop_Click(object sender, EventArgs e)
     {
         Scheduler.Stop();
+        UpdateStatus();
+    }
+
+    private void UpdateStatus()
+    {
+        lblOutput.Text = "Status: " + Scheduler.ToggledOn.ToString();
     }
 }

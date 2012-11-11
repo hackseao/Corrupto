@@ -11,8 +11,8 @@ public partial class Hit : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        try
-        {
+        //try
+        //{
             System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Hit!", DateTime.Now.TimeOfDay.ToString()));
 
             if(Scheduler.ToggledOn && !CorruptoInstance.InstanceActive)
@@ -21,14 +21,14 @@ public partial class Hit : System.Web.UI.Page
                 var instance = new CorruptoInstance();
                 instance.Execute();
             }
-        }
-        catch
-        {
-            // HACK
-        }
-        finally
-        {
+        //}
+        //catch
+        //{
+        //    // HACK
+        //}
+        //finally
+        //{
             Scheduler.Schedule();
-        }
+        //}
     }
 }
