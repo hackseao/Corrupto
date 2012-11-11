@@ -50,8 +50,13 @@ namespace Corrupto.Logic
 
         private IQuery GetCommandLicenseListQuery(string queryString)
         {
-            if (queryString.ToLower().Contains("license"))
-                return new QueryLicense(QueryLicense.QueryType.Top3);
+            string commandDescription = "license";
+
+            if (queryString.ToLower().Contains(commandDescription))
+            {
+                string param = queryString.Substring(queryString.IndexOf(commandDescription)+commandDescription.Length+1);
+                return new QueryLicense(QueryLicense.QueryType.Top3) { Nom = param.Trim(), Nom2 = param.Trim() };
+            }
 
             return null;
         }

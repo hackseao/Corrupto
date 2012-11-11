@@ -9,8 +9,8 @@ namespace Corrupto.Logic
 {
     class QueryLicense : Corrupto.Interfaces.IQuery
     {
-        string Nom {get; set;}
-        string Nom2 { get; set; }
+        public string Nom {get; set;}
+        public string Nom2 { get; set; }
 
         public enum QueryType
         {

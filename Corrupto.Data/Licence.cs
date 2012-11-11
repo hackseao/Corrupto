@@ -21,22 +21,23 @@ namespace Corrupto.Data
         {
             List<string> result = new List<string>();
 
-            // Provide the query string with a parameter placeholder.
-            string queryString = "Select TOP 3 * from License where Nom like '%@Nom%' or Nom2 like '%@Nom2%'";
+            if (string.IsNullOrEmpty(nom) || string.IsNullOrEmpty(nom2))
+                throw new InvalidOperationException("Specify values for values Nom and/or Nom2!");
 
-            // Specify the parameter value.
-            int paramValue = 5;
+            // Provide the query string with a parameter placeholder.
+            string queryString = "Select TOP 3 * from License where Nom like @Nom or Nom2 like @Nom2";
 
             // Create and open the connection in a using block. This
             // ensures that all resources will be closed and disposed
             // when the code exits.
-            using (SqlConnection connection =
-            new SqlConnection(_connectionString))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 // Create the Command and Parameter objects.
                 SqlCommand command = new SqlCommand(queryString, connection);
-                command.Parameters.AddWithValue("@Nom", paramValue);
-                command.Parameters.AddWithValue("@Nom2", paramValue);
+                //command.CommandTimeout = 5;
+                command.Parameters.AddWithValue("@Nom", '%'+nom+'%');
+                command.Parameters.AddWithValue("@Nom2", '%'+nom2+'%');
+                Console.WriteLine(command.CommandText);
                 try
                 {
                     connection.Open();
@@ -53,7 +54,6 @@ namespace Corrupto.Data
                 {
                     Console.WriteLine(ex.Message);
                 }
-                Console.ReadLine();
             }
             return result;
         }
