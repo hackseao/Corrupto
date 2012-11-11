@@ -8,10 +8,6 @@ using System.Threading.Tasks;
 
 namespace Corrupto.Data
 {
-    //<connectionStrings>
- //  <add name="CorruptoDB" connectionString="Data Source=tcp:fc5104fp60.database.windows.net,1433;Initial Catalog=corrupto_db;User Id=corrupto@fc5104fp60;Password=1Raton42!;"/>
- //</connectionStrings>
-
     public class Licence
     {
         string _connectionString;
