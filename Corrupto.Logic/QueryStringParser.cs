@@ -32,8 +32,6 @@ namespace Corrupto.Logic
             if (licenseQuery != null)
                 result.Add(licenseQuery);
 
-            //TODO: Add more parsers here.
-
             return result;
         }
 
@@ -55,7 +53,7 @@ namespace Corrupto.Logic
             if (queryString.ToLower().Contains(commandDescription))
             {
                 string param = queryString.Substring(queryString.IndexOf(commandDescription)+commandDescription.Length+1);
-                return new QueryLicense(QueryLicense.QueryType.Top3) { Nom = param.Trim(), Nom2 = param.Trim() };
+                return new QueryLicense(QueryLicense.QueryType.Top3) { Nom = param.Trim(), Nom2 = param.Trim(), NumeroLicense = param.Trim() };
             }
 
             return null;

@@ -31,6 +31,10 @@ namespace Corrupto.Logic
                     uresult.Add(currentUResult);
             }
 
+            //No Queries! We got spammed or a typo was made.
+            if (queries.Count() == 0)
+                uresult.Add(new UnformattedResult(){RawResult = "Je ne comprends pas la question!"});
+
             ResultFormatter rFormatter = new ResultFormatter();
             return rFormatter.Format(uresult);
         }
