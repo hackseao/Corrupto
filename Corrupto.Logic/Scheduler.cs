@@ -40,14 +40,14 @@ namespace Corrupto.Logic
       
         public static void Start()
         {
-            System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Start!", DateTime.Now.TimeOfDay.ToString()));
+            //System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Start!", DateTime.Now.TimeOfDay.ToString()));
             ToggledOn = true;
             Hit(String.Empty, null, CacheItemRemovedReason.Expired);
         }
 
         public static void Stop()
         {
-            System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Stop!", DateTime.Now.TimeOfDay.ToString()));
+            //System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Stop!", DateTime.Now.TimeOfDay.ToString()));
             ToggledOn = false;
         }
 

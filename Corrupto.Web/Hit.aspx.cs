@@ -13,7 +13,7 @@ public partial class Hit : System.Web.UI.Page
     {
         //try
         //{
-            System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Hit!", DateTime.Now.TimeOfDay.ToString()));
+            //System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Hit!", DateTime.Now.TimeOfDay.ToString()));
 
             if(Scheduler.ToggledOn && !CorruptoInstance.InstanceActive)
             {
