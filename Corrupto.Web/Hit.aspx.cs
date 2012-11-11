@@ -15,12 +15,12 @@ public partial class Hit : System.Web.UI.Page
         //{
             //System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Hit!", DateTime.Now.TimeOfDay.ToString()));
 
-            if(Scheduler.ToggledOn && !CorruptoInstance.InstanceActive)
-            {
-                System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Executing...", DateTime.Now.TimeOfDay.ToString()));
+            //if(Scheduler.ToggledOn && !CorruptoInstance.InstanceActive)
+            //{
+                //System.Diagnostics.Debug.WriteLine(String.Format("[{0}] Executing...", DateTime.Now.TimeOfDay.ToString()));
                 var instance = new CorruptoInstance();
                 instance.Execute();
-            }
+            //}
         //}
         //catch
         //{
@@ -28,7 +28,7 @@ public partial class Hit : System.Web.UI.Page
         //}
         //finally
         //{
-            Scheduler.Schedule();
+            //Scheduler.Schedule();
         //}
     }
 }
