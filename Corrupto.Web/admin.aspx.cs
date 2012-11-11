@@ -14,10 +14,12 @@ public partial class admin : System.Web.UI.Page
     {  
     }
 
-    protected void btnExecute_Click(object sender, EventArgs e)
+    protected void btnStart_Click(object sender, EventArgs e)
     {
-        CorruptoInstance instance = new CorruptoInstance();
-        instance.Execute();
-        lblLastExecutionTime.Text = String.Format("Last execution time: {0}", DateTime.Now.ToLongTimeString());
+        Scheduler.Start();
+    }
+    protected void btnStop_Click(object sender, EventArgs e)
+    {
+        Scheduler.Stop();
     }
 }

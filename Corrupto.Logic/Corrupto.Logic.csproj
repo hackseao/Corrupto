@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,6 +50,7 @@
     <Compile Include="QueryStringParser.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="ResultFormatter.cs" />
+    <Compile Include="Scheduler.cs" />
     <Compile Include="Search.cs" />
     <Compile Include="UnformattedResult.cs" />
   </ItemGroup>

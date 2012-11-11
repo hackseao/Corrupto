@@ -10,6 +10,12 @@ namespace Corrupto.Logic
     {
         private TwitterProvider _twitter;
 
+        public static bool InstanceActive
+        {
+            get;
+            set;
+        }
+
         public CorruptoInstance()
         {
             _twitter = new TwitterProvider();
@@ -17,6 +23,8 @@ namespace Corrupto.Logic
 
         public void Execute()
         {
+            CorruptoInstance.InstanceActive = true;
+
             var state = ExecutionStatePersistence.Get();
 
             _twitter.ReciprocateFriendships();
@@ -30,14 +38,12 @@ namespace Corrupto.Logic
             foreach(var mention in mentions)
             {
                 //IResult result = Search(mention.Text);
-                //_twitter.SendDirectMessage(mention.UserId, result.ResultToDisplay);
-                _twitter.SendDirectMessage(mention.UserId, String.Format(tmpReply, mention.Username));
+                _twitter.Tweet(String.Format(tmpReply, mention.Username));
             }
 
             foreach(var message in directMessages)
             {
                 //IResult result = Search(message.Text);
-                //_twitter.SendDirectMessage(message.UserId, result.ResultToDisplay);
                 _twitter.SendDirectMessage(message.UserId, String.Format(tmpReply, message.Username));
             }
 
@@ -48,6 +54,8 @@ namespace Corrupto.Logic
             };
 
             ExecutionStatePersistence.Set(newState);
+
+            CorruptoInstance.InstanceActive = false;
         }
 
         private IResult Search(string query)

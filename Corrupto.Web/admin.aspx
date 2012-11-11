@@ -9,9 +9,10 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:Button ID="btnExecute" Text="Execute" runat="server" OnClick="btnExecute_Click" /><br />
-        <br />
-        <asp:Label ID="lblLastExecutionTime" runat="server" />
+        <asp:Button ID="btnStart" Text="Start" runat="server" OnClick="btnStart_Click" />
+        <asp:Button ID="btnStop" Text="Stop" runat="server" OnClick="btnStop_Click" />
+        <hr />
+        <asp:Label ID="lblOutput" runat="server" />
     </div>
     </form>
 </body>
