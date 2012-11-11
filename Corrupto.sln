@@ -5,7 +5,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Corrupto.Web", "http://loca
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{2ba5b473-bd0b-439a-a3d0-863381220037}|Corrupto.Logic.dll;{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}|Corrupto.Interfaces.dll;{41BB24E0-BE7F-4EF6-9356-77D74507CF92}|Corrupto.Twitter.dll;{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}|Corrupto.Data.dll;"
+		ProjectReferences = "{2ba5b473-bd0b-439a-a3d0-863381220037}|Corrupto.Logic.dll;{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}|Corrupto.Interfaces.dll;{41BB24E0-BE7F-4EF6-9356-77D74507CF92}|Corrupto.Twitter.dll;{28844EFF-90B6-4426-AE5C-8D6FBAB2DF82}|Corrupto.Data.dll;{5A2FACF6-12F5-432F-86C8-716DF22DAC19}|Corrupto.SvcDataProvider.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_2512"
 		Debug.AspNetCompiler.PhysicalPath = "Corrupto.Web\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_2512\"
@@ -31,6 +31,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Logic", "Corrupto.Logic\Corrupto.Logic.csproj", "{2BA5B473-BD0B-439A-A3D0-863381220037}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.Interfaces", "Corrupto.Interfaces\Corrupto.Interfaces.csproj", "{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrupto.SvcDataProvider", "Corrupto.SvcDataProvider\Corrupto.SvcDataProvider.csproj", "{5A2FACF6-12F5-432F-86C8-716DF22DAC19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -58,6 +60,10 @@ Global
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE60FB41-E023-48CA-A99E-F4D7F8CBD2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A2FACF6-12F5-432F-86C8-716DF22DAC19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A2FACF6-12F5-432F-86C8-716DF22DAC19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A2FACF6-12F5-432F-86C8-716DF22DAC19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A2FACF6-12F5-432F-86C8-716DF22DAC19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

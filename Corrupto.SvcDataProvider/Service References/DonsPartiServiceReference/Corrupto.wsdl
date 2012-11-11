@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/corrupto" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/corrupto" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/corrupto">
+      <s:element name="InterrogerCorrupto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCommand" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InterrogerCorruptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InterrogerCorruptoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InterrogerCorruptoSoapIn">
+    <wsdl:part name="parameters" element="tns:InterrogerCorrupto" />
+  </wsdl:message>
+  <wsdl:message name="InterrogerCorruptoSoapOut">
+    <wsdl:part name="parameters" element="tns:InterrogerCorruptoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="corruptoSoap">
+    <wsdl:operation name="InterrogerCorrupto">
+      <wsdl:input message="tns:InterrogerCorruptoSoapIn" />
+      <wsdl:output message="tns:InterrogerCorruptoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="corruptoSoap" type="tns:corruptoSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InterrogerCorrupto">
+      <soap:operation soapAction="http://tempuri.org/corrupto/InterrogerCorrupto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="corruptoSoap12" type="tns:corruptoSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InterrogerCorrupto">
+      <soap12:operation soapAction="http://tempuri.org/corrupto/InterrogerCorrupto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="corrupto">
+    <wsdl:port name="corruptoSoap" binding="tns:corruptoSoap">
+      <soap:address location="http://localhost/Corrupto.asmx" />
+    </wsdl:port>
+    <wsdl:port name="corruptoSoap12" binding="tns:corruptoSoap12">
+      <soap12:address location="http://localhost/Corrupto.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -32,6 +32,11 @@ namespace Corrupto.Logic
             if (licenseQuery != null)
                 result.Add(licenseQuery);
 
+            IQuery donsQuery = GetCommandDonsListQuery(_rawQueryString);
+            if (donsQuery != null)
+                result.Add(donsQuery);
+
+
             return result;
         }
 
@@ -58,5 +63,19 @@ namespace Corrupto.Logic
 
             return null;
         }
+
+        private IQuery GetCommandDonsListQuery(string queryString)
+        {
+            string commandDescription = "dons?";
+
+            if (queryString.ToLower().Contains(commandDescription))
+            {
+                string param = queryString.Substring(queryString.IndexOf(commandDescription) + commandDescription.Length + 1);
+                return new QueryDons(QueryDons.QueryType.Top3) { CodePostal = param.Trim()};
+            }
+
+            return null;
+        }
+
     }
 }

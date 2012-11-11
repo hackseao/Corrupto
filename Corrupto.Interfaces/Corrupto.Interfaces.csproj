@@ -39,10 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDatabaseProvider.cs" />
     <Compile Include="IQuery.cs" />
     <Compile Include="IResult.cs" />
-    <Compile Include="IServiceProvider.cs" />
     <Compile Include="IUnformattedResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
