@@ -19,7 +19,10 @@ namespace Corrupto.Logic
         {
             get
             {
-                return (bool) HttpContext.Current.Application[AppKey];
+                var obj = HttpContext.Current.Application.Get(AppKey);
+                if(obj == null) obj = false;
+                return (bool)obj;
+                    
             }
             set
             {
