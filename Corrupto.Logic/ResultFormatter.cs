@@ -8,7 +8,7 @@ namespace Corrupto.Logic
 {
     public class ResultFormatter
     {
-        const int MAXRESPONSE = 140;
+        const int MAXRESPONSE = 130;
 
         public Corrupto.Interfaces.IResult Format(List<Corrupto.Interfaces.IUnformattedResult> uresults)
         {

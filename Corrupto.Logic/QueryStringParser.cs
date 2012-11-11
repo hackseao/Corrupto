@@ -50,7 +50,7 @@ namespace Corrupto.Logic
 
         private IQuery GetCommandLicenseListQuery(string queryString)
         {
-            string commandDescription = "license";
+            string commandDescription = "license?";
 
             if (queryString.ToLower().Contains(commandDescription))
             {

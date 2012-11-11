@@ -44,7 +44,7 @@ namespace Corrupto.Data
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        string row = string.Format("{0} {1} pour la license {2} jusqu'au {3}", reader[0], reader[1],  reader[2], reader[3]);
+                        string row = string.Format("{0} {1} pour la license {2} révoquée jusqu'au {3}", reader[0], reader[1],  reader[2], ((DateTime)reader[3]).ToShortDateString());
                         result.Add(row);
                         Console.WriteLine(row);
                     }

@@ -32,8 +32,14 @@ namespace Corrupto.Logic
             List<string> rawResult = data.GetLicense(Nom, Nom2);
             if (rawResult != null && rawResult.Count > 0)
             {
+                re.RawResult = "NON! ";
+
                 foreach (string r in rawResult)
                     re.RawResult += r;
+            }
+            else 
+            {
+                re.RawResult = "Cette entreprise ne figure au registre des licenses révoquées.";
             }
 
             return re;

@@ -8,10 +8,7 @@ namespace Corrupto.Logic
 {
     public class QueryHelp : Corrupto.Interfaces.IQuery
     {
-        const string RESPONSEHELP = "Utiliser le format suivant [commande] [source] [codepostal]/n" + 
-            "commande: aide, max, top3, /n"+ 
-            "source: Contrats, Dons, /n" +
-            "example: max don H0H0H0";
+        const string RESPONSEHELP = "La commande: License? [Nom d'entreprise] identifiera une entreprise avec une license en litige.";
 
         public Interfaces.IUnformattedResult Execute()
         {
