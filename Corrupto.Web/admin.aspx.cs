@@ -11,7 +11,8 @@ using Corrupto.Logic;
 public partial class admin : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
-    {  
+    {
+        lblOutput.Text = "Status: " + Scheduler.ToggledOn.ToString();
     }
 
     protected void btnStart_Click(object sender, EventArgs e)
