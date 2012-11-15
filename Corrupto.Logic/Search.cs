@@ -11,6 +11,8 @@ namespace Corrupto.Logic
     /// </summary>
     public class Search
     {
+        const string IDONTUNDERSTAND = "Je ne comprends pas la question!  Essayez: License? [Nom d'entreprise ou no.RBQ] ou Dons? [Codepostal]";
+
         public Corrupto.Interfaces.IResult ExecuteSearch(string rawQueryString)
         {
             //Parse
@@ -33,7 +35,7 @@ namespace Corrupto.Logic
 
             //No Queries! We got spammed or a typo was made.
             if (queries.Count() == 0)
-                uresult.Add(new UnformattedResult(){RawResult = "Je ne comprends pas la question!"});
+                uresult.Add(new UnformattedResult(){RawResult = IDONTUNDERSTAND});
 
             ResultFormatter rFormatter = new ResultFormatter();
             return rFormatter.Format(uresult);
